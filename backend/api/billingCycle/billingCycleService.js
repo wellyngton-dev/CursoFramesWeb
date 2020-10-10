@@ -23,8 +23,8 @@ function parseErrors(nodeRestfullErrors) {
   return errors
 }
 
-BillingCycle.route('count', function(req, res, next) {
-  BillingCycle.count(function(error, value) {
+BillingCycle.route('countDocuments', function(req, res, next) {
+  BillingCycle.countDocuments(function(error, value) {
     if(error) {
       res.status(500).json({errors: [error]})
     } else {
