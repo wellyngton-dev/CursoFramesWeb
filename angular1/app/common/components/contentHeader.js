@@ -1,4 +1,4 @@
-(function(){
+(function() {
 angular.module('primeiraApp').component('contentHeader', {
     bindings: {
         name: '@',
