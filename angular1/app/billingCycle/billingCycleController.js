@@ -3,12 +3,14 @@
         '$http',
         'msgs',
         'tabs',
+        'consts',
         BillingCycleController
     ])
 
-    function BillingCycleController($http, msgs, tabs) {
+    function BillingCycleController($http, msgs, tabs, consts) {
         const vm = this
-        const url = 'http://localhost:3003/api/billingCycles'
+        const url = `${consts.apiUrl}/billingCycles`
+        console.log(consts.apiUrl)
 
         vm.refresh = () => {
             $http.get(url).then(function (response) {
